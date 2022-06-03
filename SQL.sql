@@ -119,6 +119,9 @@ WHEN "HR" THEN 3
 WHEN "SALES" THEN 4
 ELSE 100 END),ENAME;
 
+-- functions in sql
+-- agregarte functions or (math function)
+
 
 SELECT count(*) FROM ADI;
 
@@ -129,3 +132,24 @@ WHERE JOBDESC = "MANAGER";
 
 SELECT COUNT(*)NO_OF_MANAGER FROM ADI 
 WHERE JOBDESC = "MANAGER";
+
+
+select max(salary) from adi;
+select min(salary) from adi;
+select avg(salary) from adi; 
+select sum(salary) from adi;
+
+select sum(salary) from adi
+where jobdesc = "Engineer";
+
+-- FUNCTION USING STRING
+SELECT ucase(ENAME),SALARY FROM ADI;
+
+SELECT ENAME , char_length(ENAME) FROM ADI; # UPPERCASE
+
+SELECT ENAME , char_length(ENAME) TOTAOL FROM ADI; # CHARACTER LENGTH
+SELECT lcase(ENAME), SALARY FROM ADI;
+SELECT ENAME , concat("RS.",SALARY) FROM ADI;
+SELECT ENAME , concat("RS.",FORMAT(SALARY,0)) TOT FROM ADI;
+SELECT ENAME,LEFT(ENAME,3) FROM ADI;
+SELECT * FROM ADI; 
